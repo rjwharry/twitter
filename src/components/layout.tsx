@@ -42,7 +42,6 @@ function Layout() {
   const navigate = useNavigate();
   const onLogOut = async () => {
     const ok = confirm("Are you sure you want to log out?");
-    console.log(ok);
     if (ok) {
       await auth.signOut();
       navigate("/login");

@@ -8,7 +8,6 @@ function ProtectedRoute({
 }) {
 
   const user = auth.currentUser; // give logined user or null if not logined
-  console.log(user);
   if (user === null) {
     return <Navigate to="/login" />
   }
