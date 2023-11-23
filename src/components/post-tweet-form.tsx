@@ -60,7 +60,7 @@ const SubmitBtn = styled.input`
   }
 `;
 
-const MB = 1024;
+const MB = 1024 * 1024;
 
 function PostTweetForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -95,9 +95,10 @@ function PostTweetForm() {
         createdAt: Date.now(),
         userName: user.displayName || "Anonymous",
         userId: user.uid,
+        photo: "",
       })
       if (file) {
-        const locationRef = ref(storage, `tweets/${user.uid}-${user.displayName}/${doc.id}`)
+        const locationRef = ref(storage, `tweets/${user.uid}/${doc.id}`)
         const result = await uploadBytes(locationRef, file);
         const url = await getDownloadURL(result.ref);
         await updateDoc(doc, {
