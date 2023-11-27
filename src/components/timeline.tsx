@@ -1,4 +1,4 @@
-import { Unsubscribe, collection, getDocs, limit, onSnapshot, orderBy, query } from "firebase/firestore";
+import { Unsubscribe, collection, limit, onSnapshot, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { db } from "../firebase";
