@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ITweet } from "./timeline";
 import React, { useEffect, useState } from "react";
 import { doc, updateDoc } from "firebase/firestore";
-import { auth, db, storage } from "../firebase";
+import { db, storage } from "../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
 interface EditPropsInterface {
